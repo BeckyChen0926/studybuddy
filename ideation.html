@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Study Buddy Portfolio</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .w3-half {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .w3-half :hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar green w3-collapse w3-top w3-large w3-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="w3-container">
+        <br />
+        <a href="index.html" style="text-decoration: none"
+          ><img
+            src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/01-512.webp?v=1658176381363"
+            style="
+              width: 30%;
+              -webkit-filter: hue-rotate(50deg);
+              filter: hue-rotate(50deg);
+            "
+          />
+          <h1 class="w3-padding-16">
+            <b style="color: white; font-size: 60px">Study<br />Buddy</b>
+          </h1></a
+        >
+      </div>
+      <div class="w3-bar-block">
+        <ul style="list-style: none; padding-left: 0" class="w3-ul">
+          <li>
+            <a
+              href="index.html"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-hover-white"
+              >Introduction</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="javascript:void(0)"
+              onclick="w3_open()"
+              class="w3-button w3-dropdown-click w3-bar-item w3-hover-white nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="true"
+              style="color: black"
+              >Work Process</a
+            >
+            <div
+              class="dropdown-menu w3-dropdown-content w3-dropdown-hover w3-dropdown-click"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="useranalysis.html"
+                >User Analysis</a
+              >
+              <a class="dropdown-item" href="ideation.html">Ideation</a>
+              <a class="dropdown-item" href="Interactiveproto.html"
+                >Interactive Prototyping & Evaluation</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="index.html"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-hover-white"
+              style="color: black"
+              >Takeaways</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large green w3-xlarge w3-padding"
+    >
+      <a href="index.html" style="text-decoration: none">
+        <img
+          src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/01-512.webp?v=1658176381363"
+          style="
+            width: 7%;
+            -webkit-filter: hue-rotate(50deg);
+            filter: hue-rotate(50deg);
+          "
+        />
+      </a>
+      <a
+        href="javascript:void(0)"
+        class="w3-button green w3-margin-right"
+        onclick="w3_open()"
+        >☰</a
+      >
+
+      <a href="index.html" style="text-decoration: none"
+        ><span style="color: white">Study Buddy</span></a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Modal for full size images on click-->
+    <div
+      id="modal01"
+      class="w3-modal w3-black"
+      style="padding-top: 0"
+      onclick="this.style.display='none'"
+    >
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <id ="01" class="w3-image" />
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header -->
+      <div class="w3-container" style="margin-top: 80px" id="showcase">
+        <h1 class="w3-jumbo"><b>Ideation</b></h1>
+
+        <hr style="width: 50px; border: 5px solid #aabfb8" class="w3-round" />
+      </div>
+      <!-- introduction -->
+      <div class="w3-container w3-main" id="intro" style="margin-top: 20px">
+        <h1 class="w3-xlarge greentext"><b>Scenarios</b></h1>
+        <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+
+        <img
+          alt="scenario"
+          src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Screen%20Shot%202022-07-18%20at%2019.46.13.png?v=1658188001476"
+          style="width: 100%"
+        />
+
+        <div class="w3-container" style="margin-top: 20px">
+          <h1 class="w3-xlarge greentext"><b>Design Directions</b></h1>
+          <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+          <center>
+            <img
+              src="https://cdn.glitch.global/141c96de-0444-498a-bbb3-261eeb106a43/Group%205%20_%20P2%20Presentation%20(1).jpg?v=1657088368447"
+              style="width: 100%"
+            />
+            <br />
+            <br />
+            <br />
+            <br />
+            <img
+              src="https://cdn.glitch.global/141c96de-0444-498a-bbb3-261eeb106a43/Group%205%20_%20P2%20Presentation.jpg?v=1657088367483"
+              style="width: 100%"
+            />
+
+            <br />
+            <br />
+            <br />
+            <br />
+          </center>
+
+          <img
+            src="https://cdn.glitch.global/141c96de-0444-498a-bbb3-261eeb106a43/Group%205%20_%20P2%20Presentation%20(2).jpg?v=1657088370228"
+            style="width: 100%"
+          />
+
+          <br />
+
+          <div class="w3-container" style="margin-top: 20px">
+            <h1 class="w3-xlarge greentext"><b>Design I rationale</b></h1>
+            <hr
+              style="width: 50px; border: 2px solid #aabfb8"
+              class="w3-round"
+            />
+            <p style="color: darkgreen"><u>Playful and Engaging:</u></p>
+            <p>
+              This design was made keeping young audiences in mind. Design 1
+              includes a social media aspect.
+            </p>
+
+            <p style="color: darkgreen"><u>Detailed:</u></p>
+            <p>
+              While the setup will be familiar and intuitive to iPhone users,
+              there is still lots of information on each page.
+            </p>
+
+            <p style="color: darkgreen"><u>Creative/Personal:</u></p>
+            <p>
+              The design utilizes a variety of icons and interactive features.
+              In addition, users also has the ability to personalize their
+              experience.
+            </p>
+
+            <br />
+
+            <center>
+              <img
+                src="https://cdn.glitch.global/141c96de-0444-498a-bbb3-261eeb106a43/Screen%20Shot%202022-07-06%20at%2002.08.03.png?v=1657087767365"
+                style="width: 100%"
+              />
+              <br />
+              <br />
+              <br />
+              <br />
+
+              <img
+                src="https://cdn.glitch.global/141c96de-0444-498a-bbb3-261eeb106a43/Screen%20Shot%202022-07-06%20at%2002.08.48.png?v=1657087775593"
+                style="width: 100%"
+              />
+              <br />
+            </center>
+            <div class="w3-container" style="margin-top: 20px">
+              <h1 class="w3-xlarge greentext"><b>Design II rationale</b></h1>
+              <hr
+                style="width: 50px; border: 2px solid #aabfb8"
+                class="w3-round"
+              />
+
+              <p style="color: darkgreen"><u>Efficient:</u></p>
+              <p>
+                Most of the tasks can be done with a few clicks with this
+                design. Not too many extra, complicated designs are incorporated
+              </p>
+
+              <p style="color: darkgreen"><u>Minimalistic:</u></p>
+              <p>
+                The design is simple and minimalistic. Not too many designs are
+                present to clutter the screen
+              </p>
+
+              <p style="color: darkgreen"><u>Organized</u></p>
+              <p>
+                The design is highly organized. Similar functions are grouped
+                together, and functions are divided into subgroups and
+                sub-categories
+              </p>
+            </div>
+
+            <div class="w3-container" style="margin-top: 20px">
+              <h1 class="w3-xlarge greentext"><b></b></h1>
+
+              <h1 class="w3-xlarge greentext">
+                <b>Summary of takeaways from in-class design review session</b>
+              </h1>
+              <hr
+                style="width: 50px; border: 2px solid #aabfb8"
+                class="w3-round"
+              />
+              <p>
+                Based on the feedback our team received in class, we decided to
+                adopt a design that incorporates aspects from both design
+                directions we presented in class.
+                <br />
+                <br />
+                Students complimented the first design direction, or the more
+                “playful” design for its color scheme and interactive features.
+                However, people also mentioned that they like the organization
+                and panels used in the second design. As a result, our team has
+                decided to adapt to a design that combines the strengths from
+                both designs.
+
+                <br />
+                <br />
+                Our new design for the application will have the interactive and
+                personalizable features in design 1 and well as the organization
+                in design 2. In addition, our new design will incorporate some
+                new features. We will include more labels next to the icons used
+                in the application to make the application more learnable for
+                new users. We will also have a new anonymous tab within each
+                study group or class group for students to ask each other
+                questions. There will also be a kick-out feature in group
+                meetings and video chats that would allow students to kick out
+                users that are disturbing the group meeting or users that do not
+                belong to the group. However, in order for a user to be kicked
+                out of the meeting, at least 50% of the participants in the
+                video meeting would have to agree or vote to kick the user out.
+
+                <br />
+                <br />
+                In addition, to prevent errors or users accidentally uploading
+                the wrong material, we will also add a confirmation step to
+                double check with the user before the user can proceed to upload
+                the study material. Users will also be able to delete the study
+                materials they uploaded later. Moreover, to prevent cheating
+                using the application, we will also make the users agree to the
+                Terms and Agreement to acknowledge that they are aware of their
+                school’s Honor Code and will not conduct or participate in
+                activities that are against the Honor Code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- W3.CSS Container -->
+    <div
+      class="w3-light-grey w3-container w3-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="w3-right">
+        <a
+          href="https://www.w3schools.com/spaces"
+          title="W3Schools Spaces"
+          target="_blank"
+          class="w3-hover-opacity"
+        ></a>
+      </p>
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
