@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Study Buddy Portfolio</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .w3-half {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .w3-half :hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar green w3-collapse w3-top w3-large w3-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="w3-container">
+        <br />
+        <a href="index.html" style="text-decoration: none"
+          ><img
+            src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/01-512.webp?v=1658176381363"
+            style="
+              width: 30%;
+              -webkit-filter: hue-rotate(50deg);
+              filter: hue-rotate(50deg);
+            "
+          />
+          <h1 class="w3-padding-16">
+            <b style="color: white; font-size: 60px">Study<br />Buddy</b>
+          </h1></a
+        >
+      </div>
+      <div class="w3-bar-block">
+        <ul style="list-style: none; padding-left: 0" class="w3-ul">
+          <li>
+            <a
+              href="#intro"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-hover-white"
+              >Introduction</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="javascript:void(0)"
+              onclick="w3_open()"
+              class="w3-button w3-dropdown-click w3-bar-item w3-hover-white nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="true"
+              style="color: black"
+              >Work Process</a
+            >
+            <div
+              class="dropdown-menu w3-dropdown-content w3-dropdown-hover w3-dropdown-click"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="useranalysis.html"
+                >User Analysis</a
+              >
+              <a class="dropdown-item" href="ideation.html">Ideation</a>
+              <a class="dropdown-item" href="Interactiveproto.html">
+                Interactive Prototyping and Evaluation</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="#takeaway"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-hover-white"
+              style="color: black"
+              >Takeaways</a
+            >
+          </li>
+        </ul>
+        <!--<a
+          href="#contact"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-white"
+          >Contact</a
+        > -->
+      </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large green w3-xlarge w3-padding"
+    >
+      <a href="index.html" style="text-decoration: none">
+        <img
+          src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/01-512.webp?v=1658176381363"
+          style="
+            width: 7%;
+            -webkit-filter: hue-rotate(50deg);
+            filter: hue-rotate(50deg);
+          "
+        />
+      </a>
+      <a
+        href="javascript:void(0)"
+        class="w3-button green w3-margin-right"
+        onclick="w3_open()"
+        >☰</a
+      >
+
+      <a href="index.html" style="text-decoration: none"
+        ><span style="color: white">Study Buddy</span></a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header -->
+      <div class="w3-container" style="margin-top: 80px" id="showcase">
+        <h1 class="w3-jumbo"><b>Study Buddy</b></h1>
+        <h1 class="w3-xxxlarge greentext">
+          <b> Stay Connected, Study Together</b>
+        </h1>
+        <hr style="width: 50px; border: 5px solid #aabfb8" class="w3-round" />
+      </div>
+
+      <!-- Modal for full size images on click-->
+      <div
+        id="modal01"
+        class="w3-modal w3-black"
+        style="padding-top: 0"
+        onclick="this.style.display='none'"
+      >
+        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+        <div
+          class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+        >
+          <id ="01" class="w3-image" />
+          <p id="caption"></p>
+        </div>
+      </div>
+
+      <!-- introduction -->
+      <div class="w3-container" id="intro" style="margin-top: 20px">
+        <p style="font-size: 19px">
+          <b>Study Buddy</b>: Designed by
+          <a
+            href="https://noiseless-wry-havarti.glitch.me/"
+            target="_blank"
+            style="color: darkgreen"
+            >Ada Wang</a
+          >,
+          <a
+            href="https://loving-mahogany-clownfish.glitch.me/index.html"
+            target="_blank"
+            style="color: darkgreen"
+            >Annie Chen</a
+          >,
+          <a
+            href="https://becky-chen-portfolio.glitch.me"
+            target="_blank"
+            style="color: darkgreen"
+            >Becky Chen</a
+          >, Elizabeth Weaver
+        </p>
+        <br />
+        <h1 class="w3-xlarge greentext"><b>Problem Statement</b></h1>
+        <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+        <p style="font-size: 19px">
+          Because of the isolated environment created by online learning, there
+          is an inability for students to study and focus together with other
+          students while taking online classes at home. Furthermore, the variety
+          of websites and virtual meeting platforms teachers and professors use
+          makes it difficult for students to meet, collaborate, and study
+          together outside of classes.
+        </p>
+        <br />
+        <h1 class="w3-xlarge greentext"><b>Our Solution</b></h1>
+        <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+        <p style="font-size: 19px">
+          Our application, Study Buddy, is an interactive site where users can
+          find buddies to study with and better organize their resources. In
+          order to support our target users, who are college students taking
+          classs at home, we provide them with the platform to connect with
+          other students at their schools and join unique study rooms that can
+          be created for different purposes. In addition, our website also has
+          special features to help users better organize their study materials
+          and the numerous meeting links they have, which can also help them to
+          better focus on their work by allowing them to quickly find resources
+          they need.
+        </p>
+        <p></p>
+      </div>
+
+      <!-- Designers -->
+
+      <div class="w3-container" id="process" style="margin-top: 40px">
+        <h1 class="w3-xxxlarge greentext">
+          <b>Our Human-Centered Design Process</b>
+        </h1>
+        <hr style="width: 50px; border: 5px solid #aabfb8" class="w3-round" />
+      </div>
+
+      <!-- The Team -->
+      <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <a href="useranalysis.html">
+              <img
+                src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Screen%20Shot%202022-07-18%20at%2017.21.33.png?v=1658179326804"
+                alt="Persona"
+                style="width: 100%"
+              />
+            </a>
+
+            <div class="w3-container">
+              <h3>I. User Analysis</h3>
+              <a href="useranalysis.html">
+                <p class="w3-opacity w3-text-black hoverblue">
+                  <u>
+                    Personas
+                    <br />
+                    Task analysis
+                    <br />
+                    Domain analysis
+                    <br />
+                    Takeaways from user interviews
+                  </u>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <a href="ideation.html">
+              <img
+                src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Screen%20Shot%202022-07-18%20at%2019.46.13.png?v=1658188001476"
+                alt="ideation"
+                style="width: 100%"
+              />
+            </a>
+            <div class="w3-container">
+              <h3>II. Ideation</h3>
+              <a href="ideation.html">
+                <p class="w3-opacity w3-text-black hoverblue">
+                  <u>
+                    Scenarios
+                    <br />
+                    Design directions with design rationale
+                    <br />
+                    Takeaways from design review
+                  </u>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <a href="Interactiveproto.html">
+              <img
+                src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Screen%20Shot%202022-07-18%20at%2019.51.18.png?v=1658188320704"
+                alt="Interactiveprototype"
+                style="width: 100%"
+              />
+            </a>
+            <div class="w3-container">
+              <h3>III. Prototyping and Evaluation</h3>
+              <a href="Interactiveproto.html">
+                <p class="w3-opacity w3-text-black hoverblue">
+                  <u>
+                    Wireframe Interactive prototype with design rationale
+                    <br />
+                    Final prototype with design rationale
+                  </u>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="w3-container" id="takeaway" style="margin-top: 75px">
+        <h1 class="w3-xxxlarge greentext"><b>Takeaways</b></h1>
+        <hr style="width: 50px; border: 5px solid #aabfb8" class="w3-round" />
+        <h4>1. User's opinions are critical!</h4>
+        <p>
+          Our team originally thought that we had created an application that is
+          well-designed, but when we tested our prototype with users, some users
+          reported that some designs are confusing. We as designers would not be
+          able to identify these confusing aspects by ourselves.
+        </p>
+        <h4>
+          2. It is important to conduct several tests to evaluate the usability
+          of our design.
+        </h4>
+        <p>
+          Developers might not be able to identify all the flaws in one test. We
+          also received slightly different feedback from different users.
+        </p>
+        <h4>
+          3. Prototypes are useful tools that can help us carry out our design
+          ideas during the initial phases.
+        </h4>
+        <p>
+          During our first presentation with the class, many people had
+          questions regarding our design, especially about our Study Materials
+          page. However, users no longer had these questions after they saw and
+          experienced the simple prototype we created with Balsamiq, which shows
+          that the prototype helped users to visualize some of the design ideas
+          that we could not properly express verbally and helped them to focus
+          on other functionality issues.
+        </p>
+      </div>
+
+      <!-- End page content -->
+    </div>
+
+    <div
+      class="w3-light-grey w3-container w3-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="w3-right">
+        <a
+          href="https://www.w3schools.com/spaces"
+          title="W3Schools Spaces"
+          target="_blank"
+          class="w3-hover-opacity"
+        ></a>
+      </p>
+    </div>
+
+    <!--Script to open and close sidebar-->
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<!--https://studybuddycs220.w3spaces.com/index.html
+https://spaces.w3schools.com/space/studybuddycs220/editor-->

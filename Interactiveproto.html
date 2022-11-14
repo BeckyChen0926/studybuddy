@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Study Buddy Portfolio</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .w3-half {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .w3-half :hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar green w3-collapse w3-top w3-large w3-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="w3-container">
+        <br />
+        <a href="index.html" style="text-decoration: none"
+          ><img
+            src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/01-512.webp?v=1658176381363"
+            style="
+              width: 30%;
+              -webkit-filter: hue-rotate(50deg);
+              filter: hue-rotate(50deg);
+            "
+          />
+          <h1 class="w3-padding-16">
+            <b style="color: white; font-size: 60px">Study<br />Buddy</b>
+          </h1></a
+        >
+      </div>
+      <div class="w3-bar-block">
+        <ul style="list-style: none; padding-left: 0" class="w3-ul">
+          <li>
+            <a
+              href="index.html"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-hover-white"
+              >Introduction</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="javascript:void(0)"
+              onclick="w3_open()"
+              class="w3-button w3-dropdown-click w3-bar-item w3-hover-white nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="true"
+              style="color: black"
+              >Work Process</a
+            >
+            <div
+              class="dropdown-menu w3-dropdown-content w3-dropdown-hover w3-dropdown-click"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="useranalysis.html"
+                >User Analysis</a
+              >
+              <a class="dropdown-item" href="ideation.html">Ideation</a>
+              <a class="dropdown-item" href="Interactiveproto.html"
+                >Interactive Prototyping & Evaluation</a
+              >
+            </div>
+          </li>
+          <li>
+            <a
+              href="index.html"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-hover-white"
+              style="color: black"
+              >Takeaways</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large green w3-xlarge w3-padding"
+    >
+      <a href="index.html" style="text-decoration: none">
+        <img
+          src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/01-512.webp?v=1658176381363"
+          style="
+            width: 7%;
+            -webkit-filter: hue-rotate(50deg);
+            filter: hue-rotate(50deg);
+          "
+        />
+      </a>
+      <a
+        href="javascript:void(0)"
+        class="w3-button green w3-margin-right"
+        onclick="w3_open()"
+        >☰</a
+      >
+
+      <a href="index.html" style="text-decoration: none"
+        ><span style="color: white">Study Buddy</span></a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header -->
+      <div class="w3-container" style="margin-top: 80px" id="showcase">
+        <h1 class="w3-jumbo"><b>Interactive Prototyping & Evaluation</b></h1>
+
+        <hr style="width: 50px; border: 5px solid #aabfb8" class="w3-round" />
+
+        <h1 class="w3-xlarge greentext">
+          <b>Wireframe Interactive Prototype</b>
+        </h1>
+        <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+        <p style="font-size: 19px">
+          Main Tasks that we focused on for the iterations<br />
+        </p>
+        <ul style="list-style: none; padding: 0">
+          <li style="list-style: none; padding: 0"><u>Task 1</u><br /></li>
+
+          Describe in your own words how you would use this application to
+          access the Zoom meeting room for CS220 through links and other
+          information previously uploaded to your Zoom Directory. Demonstrate
+          which buttons you would click on to reach your Zoom directory. Your
+          task is complete after you find the “Join Zoom” button for CS 220.
+          <br /><br />
+          <li style="list-style: none; padding: 0"><u>Task 2</u></li>
+
+          Explore the application and explain in your own words how you would
+          use this application to upload your study material (“my file”) for
+          your ECON 203 class. Add a title and a description too (title it “ECON
+          203-01 Study Guide”)! Make sure that you are uploading the study guide
+          to the designated area for the ECON 203 section. Your task is complete
+          after you see the “ECON 203-01 Study Guide” show up in your “My Study
+          Posts” page.
+
+          <br /><br />
+          <li style="list-style: none; padding: 0"><u>Task 3</u></li>
+
+          Demonstrate how you would find and join a meeting with your MATH 116
+          classmates and vote to kick someone out of the meeting. Your task is
+          complete after you receive a notification saying “KICK Voted,”
+          indicating that you have successfully voted to kick someone out.
+          <br />
+        </ul>
+        <a
+          href="https://docs.google.com/document/d/1VsL3ulaoGk63bbbqgdme-PKFy3l4ggAYJRiZ24K3Fzg/edit?usp=sharing"
+          target="_blank"
+          style="text-decoration: underline; color: darkblue"
+          >Check out our wireframe testing plan!</a
+        ><br>
+         <a
+          href="https://balsamiq.cloud/snam00m/p83fm44"
+          target="_blank"
+          style="text-decoration: underline; color: darkblue"
+          >Navigate our wirefram prototype!</a
+        >
+      
+        <br /><br />
+        <div class="justify-contentcenter text-center">
+          <div id="som-player" class="som-embed-player" data-id="c31thLV0iJ7">
+            <script src="https://screencast-o-matic.com/player/appearance/c31thLV0iJ7"></script>
+            <iframe
+              width="100%"
+              height="100%"
+              style="border: 3em"
+              scrolling="no"
+              src="https://screencast-o-matic.com/player/c31thLV0iJ7?width=100%&height=100%&ff=1&title=0"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </div>
+        <br />
+        <h1 class="w3-xlarge greentext">
+          <b>Wireframe Prototype Design Rationale</b>
+        </h1>
+        <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+
+        <p>
+          Our application has an overall youthful and semi-minimalistic design
+          theme. We tried to make the design cheerful and interactive for our
+          target users, who are typically college students. However, in order to
+          prevent the application from causing too many distractions, we also
+          tried to make our design semi-minimalistic. We avoided adding
+          unnecessary or redundant features, and we tried to keep each screen as
+          clean and organized as possible.
+        </p>
+        <br />
+
+        <!-- Modal for full size images on click-->
+        <div
+          id="modal01"
+          class="w3-modal w3-black"
+          style="padding-top: 0"
+          onclick="this.style.display='none'"
+        >
+          <span class="w3-button w3-black w3-xxlarge w3-display-topright"
+            >×</span
+          >
+          <div
+            class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+          >
+            <img id="img01" class="w3-image" />
+            <p id="caption"></p>
+          </div>
+        </div>
+
+        <div>
+          <h1 class="w3-xlarge greentext">
+            <b>InVision Prototype</b>
+          </h1>
+          <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+          <h1 class="w3-medium greentext">
+            <b>Screen Shots-- important interfaces for each task</b>
+          </h1>
+          <hr
+            style="width: 50px; border: 0.7px solid #aabfb8"
+            class="w3-round"
+          />
+
+          <p style="font-size: 19px">
+            Click to view full image and read descriptions of each task.
+          </p>
+
+          <div class="w3-row-padding" style="cursor: pointer">
+            <div class="justify-content-center text-center">
+              <img
+                src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Group%205_P4%20Presentation.jpg?v=1658209828847"
+                style="width: 100%; margin-bottom: 2.5em"
+                onclick="onClick(this)"
+                alt="Interfaces for task 1
+                     <br><b>Task 1:</b>
+Describe in your own words how you would use this application to access the Zoom meeting room for CS220 through links and other information previously uploaded to your Zoom Directory. Demonstrate which buttons you would click on to reach your Zoom directory. Your task is complete after you join the study room for CS 220.
+"
+              />
+              <img
+                src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Group%205_P4%20Presentation%20(1).jpg?v=1658209830792"
+                style="width: 100%; margin-bottom: 2.5em"
+                onclick="onClick(this)"
+                alt="Interfaces for task 2
+                     <br><b>Task 2:</b>
+Explore the application and explain in your own words how you would use this application to upload your study material (“my file”) for your ECON 203 class. Add a title and a description too (title it “ECON 203-01 Study Guide”)! Make sure that you are uploading the study guide to the designated area for the ECON 203 section. Your task is complete after you successfully upload the “ECON 203-01 Study Guide."
+              />
+              <img
+                src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Group%205_P4%20Presentation%20(2).jpg?v=1658209832793"
+                style="width: 100%"
+                onclick="onClick(this)"
+                alt="Interfaces for task 3
+                     <br><b>Task 3:</b>
+Demonstrate how you would find and join a meeting with your MATH 116 classmates and vote to kick someone out of the meeting. Your task is complete after you receive a notification saying “KICK Voted,” indicating that you have successfully voted to kick someone out."
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <h1 class="w3-medium greentext">
+          <b>Demo Video-- final P4 InVision prototype</b>
+        </h1>
+        <hr style="width: 50px; border: 0.7px solid #aabfb8" class="w3-round" />
+        <div id="som-player" class="som-embed-player" data-id="c3iqhGV0WAj">
+          <script src="https://screencast-o-matic.com/player/appearance/c3iqhGV0WAj"></script>
+          <iframe
+            width="100%"
+            height="100%"
+            style="border: 0"
+            scrolling="no"
+            src="https://screencast-o-matic.com/player/c3iqhGV0WAj?width=100%&height=100%&ff=1&title=0"
+            allowfullscreen="true"
+          ></iframe>
+        </div>
+        <br />
+         <a
+          href="https://invis.io/9J12UZTS5A37"
+          target="_blank"
+          style="text-decoration: underline; color: darkblue"
+          >Navigate our InVision prototype!</a
+        >
+      
+        <br /><br />
+
+        <h1 class="w3-xlarge greentext">
+          <b>InVision Prototype Design Rationale</b>
+        </h1>
+
+        <hr style="width: 50px; border: 2px solid #aabfb8" class="w3-round" />
+        <p style="font-size: 19px">Color Scheme<br /></p>
+        <img
+          src="https://cdn.glitch.global/3acfa6c0-492d-4356-9b76-52486bd629be/Screen%20Shot%202022-07-19%20at%2001.23.08.png?v=1658208240843"
+          width="100%"
+        />
+        <br />
+        <br />
+
+        <ul>
+          <li>
+            We chose the color green as our main color scheme because green can
+            usually symbolize or bring comfort.
+          </li>
+          <li>
+            We wanted to make our application a comforting and relaxing place
+            for users, who are usually college students seeking to use our app
+            to focus and interact with others.
+          </li>
+
+          <li>
+            Green can also signify friendliness and peace, which also complies
+            with the goal of application helping anxious college students focus
+            and establish a peaceful community.
+          </li>
+          <li>
+            We also used a more monochromatic color scheme by using different
+            shades of green. This allows us to keep our design more consistent
+            and to create internal consistency, which can increase our
+            application's learnability.
+          </li>
+
+          <li>
+            We also have the option of customizable backgrounds that provides
+            the users with more freedom and customization so that users have the
+            option to personalize their experience by either uploading their own
+            backgrounds or choosing their own color schemes.
+          </li>
+        </ul>
+
+        <p style="font-size: 19px">Graphic Design<br /></p>
+        <ul>
+          <li>
+            This design was made keeping young audiences in mind. We
+            incorporated a social media aspect in our design in order to keep
+            our audience engaged.
+          </li>
+          <li>
+            Most of the tasks can be done with a few clicks with this design.
+            There aren’t too many extra, complicated designs incorporated, which
+            can increase the efficiency and learnability of the design.
+          </li>
+          <li>
+            The design also utilizes a variety of icons and interactive
+            features. Users also have the ability to personalize their
+            experiences.
+          </li>
+          <li>
+            There is also internal color consistency for each course, which can
+            also contribute to the memorability of the application by making it
+            easier for users to identify features by colors.
+          </li>
+          <li>
+            Grid system with invisible grids for organization yet no visual
+            cluster
+          </li>
+          <li>Metaphorical icons were used to increase learnability.</li>
+        </ul>
+
+        <p style="font-size: 19px">Font/Typography<br /></p>
+        <ul>
+          <li>
+            Our application uses the font family Montserrat as the main font.
+            Montserrat has a light font weight, bringing lightness and creating
+            a sense of cleanliness.
+          </li>
+          <li>
+            The fact that this font family is simple and clean looking can make
+            the text of the application easier for users to read.
+          </li>
+          <li>
+            It can also prevent clustering of design and text throughout the
+            page, so users will not feel overwhelmed with content on their
+            screen.
+          </li>
+          <li>
+            Moreover, this Montserrat font can make the design look organized
+            since it is simple and has high readability. We also chose font
+            colors that have some contrast with the background to make the texts
+            stand out.
+          </li>
+          <li>
+            We also used grids as the main element of our application design to
+            create a sense of organization and to make the application easy for
+            users to navigate.
+          </li>
+          <li>
+            For external consistency, we used font-color blue and underline to
+            indicate clickable links (in zoom directory section).
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div
+      class="w3-light-grey w3-container w3-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="w3-right">
+        <a
+          href="https://www.w3schools.com/spaces"
+          title="W3Schools Spaces"
+          target="_blank"
+          class="w3-hover-opacity"
+        ></a>
+      </p>
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
